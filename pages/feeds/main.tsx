@@ -12,7 +12,7 @@ const Main: NextPage<IProps> = ({newsContentArr}: InferGetServerSidePropsType<Ge
       <div className="flex flex-col space-y-4 p-4 w-full lg:w-1/2">
         {
           newsContentArr.map((news: INewsContent) => {
-            return <NewsCard title={news.title} imgSrc={news.imgSrc} />
+            return <NewsCard title={news.title} imgSrc={news.imgSrc} key={news.title} />
           })
         }
       </div>

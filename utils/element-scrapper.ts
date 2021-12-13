@@ -21,14 +21,16 @@ const scrapeContent = async (site: string, path: string): Promise<INewsContent[]
       break;
     }
     
-    title = await (await titleEl.getProperty('innerHTML')).jsonValue();
+    title = await (await titleEl.getProperty('textContent')).jsonValue();
     imgSrc = await (await imgEl.getProperty('src')).jsonValue();  
     
     newsContentArr.push({title, imgSrc})
 
     index++
   }
-  
+
+  await browser.close();
+
   return newsContentArr;
 }
 
