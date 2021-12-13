@@ -1,14 +1,15 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import MainFeed from './feeds/main'
+import { INewsContent } from '../interfaces/newsContent'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-red-200'>
-      Test Tailwind
-    </div>
+    <div>index</div>
   )
 }
+
 
 export default Home
